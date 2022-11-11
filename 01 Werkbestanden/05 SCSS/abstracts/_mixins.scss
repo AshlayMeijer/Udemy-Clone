@@ -1,0 +1,104 @@
+@use "./variables";
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin listGallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  padding: 3rem;
+
+  &__title {
+    width: 30ch;
+    letter-spacing: 0.5px;
+    font-weight: lighter;
+  }
+
+  &__authorParagraph {
+    font-size: 70%;
+    font-weight: lighter;
+    color: darken(map-get(variables.$colors, "whiteColor"), 75);
+  }
+
+  &__item {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__imgWrapper {
+    height: 20rem;
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s all;
+
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+
+  &__starsWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 75%;
+    gap: 0.5rem;
+  }
+
+  &__stars {
+    color: map-get(variables.$colors, "starColor");
+  }
+
+  &__starCount {
+    color: map-get(variables.$colors, "starColor");
+  }
+
+  &__reviewCount {
+    color: darken(map-get(variables.$colors, "whiteColor"), 60);
+    font-size: 75%;
+  }
+
+  &__priceWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 80%;
+  }
+
+  &__priceNow {
+    font-weight: bold;
+  }
+
+  &__priceBefore {
+    text-decoration: line-through;
+    color: darken(map-get(variables.$colors, "whiteColor"), 60);
+    font-size: 80%;
+  }
+}

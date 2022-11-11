@@ -1,0 +1,376 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+.main__article {
+  &__savings {
+    width: 100%;
+    @include mixins.flexCenter;
+    flex-direction: row;
+    margin-top: 1rem;
+    height: 40rem;
+  }
+
+  &__img {
+    background-image: url("http://127.0.0.1:5500/04%20Archief/01%20Foto's/foto__index__one.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__imgTekstWrapper {
+    background: map-get(variables.$colors, "pureWhiteColor");
+    width: 45rem;
+    height: auto;
+    top: 25%;
+    left: 5%;
+    position: absolute;
+    padding: 1rem;
+    -webkit-box-shadow: 0px 0.5px 10px -3px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0px 0.5px 10px -3px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0.5px 10px -3px rgba(0, 0, 0, 0.6);
+  }
+
+  &__tekst {
+    font-size: 150%;
+    letter-spacing: 0.1rem;
+    line-height: 4rem;
+  }
+  &__paragraph {
+    line-height: 3rem;
+    font-weight: lighter;
+  }
+}
+
+.main__articleCursus {
+  width: 100%;
+  height: auto;
+  padding: 5rem;
+  
+  &__title {
+    font-size: 200%;
+  }
+
+  &__subTitle {
+    letter-spacing: 0.5px;
+  }
+
+  &__linkList {
+    @include mixins.flexCenter;
+    padding: 1rem;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
+  &__listItem__link {
+    color: darken(map-get(variables.$colors, "whiteColor"), 50);
+    text-decoration: none;
+    transition: 0.3s all;
+
+    &:hover {
+      color: map-get(variables.$colors, "blackColor")
+    }
+
+    &.active {
+      color: map-get(variables.$colors, "blackColor")
+    }
+  }
+
+  &__cursusWrapper {
+    padding: 3rem;
+    border: 0.5px solid map-get(variables.$colors, "blackColor");
+  }
+
+  &__cursusTitle {
+    font-size: 125%;
+  }
+
+  &__cursusParagraph {
+    max-width: 90ch;
+    font-size: 85%;
+    letter-spacing: 0.5px;
+  }
+
+  &__cursusButton {
+    margin: 1.5rem;
+    padding: 1rem 1.5rem;
+    border: none;
+    outline: none;
+    border: 0.1rem solid map-get(variables.$colors, "blackColor");
+    background: map-get(variables.$colors, "pureWhiteColor");
+    transition: 0.3s all;
+    font-weight: bold;
+    font-size: 1.3rem;
+
+    &:hover {
+      cursor: pointer;
+      background: darken(map-get(variables.$colors, "pureWhiteColor"), 5);
+    }
+
+    &:active {
+      background: darken(map-get(variables.$colors, "pureWhiteColor"), 15);
+    }
+  }
+
+  &__cursusList {
+    @include mixins.listGallery;
+  }
+}
+
+.main__articleStudent {
+  width: 100%;
+  height: auto;
+
+  &__title {
+    font-size: 150%;
+    padding: 3rem;
+    padding-left: 7.5rem
+  }
+
+  &__cursusList {
+    @include mixins.listGallery;
+  }
+}
+
+.main__articleCategories {
+  &__title {
+    font-size: 150%;
+    padding: 3rem;
+    padding-left: 7.5rem;
+  }
+
+  &__cardWrapper {
+    @include mixins.flexCenter;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__card {
+    height: 35rem;
+    width: 35rem;
+    padding: 5rem;
+  }
+
+  &__cardImgWrapper {
+    height: 25rem;
+    width: 25rem;
+    padding: 2rem;
+  }
+
+  &__cardImg {
+    height: 100%;
+    width: 100%;
+    transition: 0.3s all;
+
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+  }
+}
+
+.main__articleTopics {
+  width: 100%;
+  height: 60rem;
+  background: map-get(variables.$colors, "whiteColor");
+
+  &__title {
+    font-size: 150%;
+    padding: 3rem;
+    padding: 7.5rem
+  }
+
+  &__wrapper {
+    @include mixins.flexCenter;
+    flex-direction: row;
+    gap: 5rem;
+    text-align: center;
+  }
+
+  &__topicsWrapper {
+    @include mixins.flexCenter;
+    flex-direction: row;
+    gap: 5rem;
+  }
+
+  &__rowTopics {
+    @include mixins.flexCenter;
+    width: 100%;
+    gap: 5rem;
+
+    &__title {
+
+    }
+
+    &__list {
+      @include mixins.flexCenter;
+      font-size: 100%;
+      gap: 4rem;
+    }
+  }
+
+  &__buttonWrapper {
+    padding: 7.5rem;
+
+  }
+
+  &__button {
+    padding: 1rem 2rem;
+    border: none;
+    outline: none;
+    background: map-get(variables.$colors, "whiteColor");
+    color: map-get(variables.$colors, "blackColor");
+    transition: 0.3s all;
+    border: 0.1rem solid map-get(variables.$colors, "blackColor");
+
+    &:hover {
+      background: darken(map-get(variables.$colors, "whiteColor"), 20);
+      cursor: pointer;
+    }
+
+    &:active {
+      position: relative;
+      top: 1px;
+    }
+  }
+}
+
+.main__articleCompany {
+  height: 30rem;
+  width: 100%;
+  @include mixins.flexCenter;
+  gap: 2.5rem;
+
+  &__title {
+    font-size: 150%;
+    padding: 3rem;
+  }
+
+  &__paragraph {
+    font-size: 100%;
+    max-width: 75%;
+  }
+
+  &__imgList {
+    width: 75%;
+    height: auto;
+    @include mixins.flexCenter;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem
+  }
+
+  &__imgWrapper {
+    @include mixins.flexCenter;
+    justify-content: space-between;
+    flex-direction: row;
+    width: calc(50rem - 4rem);
+  }  
+}
+
+
+.main__articleUdemy {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+
+  &__imgRight,
+  &__imgLeft {
+    height: 40rem;
+    width: 40rem;
+  }
+
+  &__wrapper {
+    @include mixins.flexCenter;
+    flex-direction: row;
+    gap: 10rem;
+
+    &ItemLeft {
+      width: 30ch;
+      height: auto;
+    }
+  }
+
+  &__itemTitle {
+    font-size: 150%;
+    padding-bottom: 2rem;
+  }
+
+  &__logoBus {
+    height: 5rem;
+    width: 20rem;
+  }
+
+  &__button {
+    &Wrapper {
+      width: 100%;
+      @include mixins.flexCenter;
+      flex-direction: row;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    &Dark {
+      padding: 1rem 2rem;
+      border: none;
+      outline: none;
+      background: map-get(variables.$colors, "blackColor");
+      color: map-get(variables.$colors, "whiteColor");
+      transition: 0.3s all;
+  
+      &:hover {
+        background: darken(map-get(variables.$colors, "whiteColor"), 65);
+        cursor: pointer;
+      }
+  
+      &:active {
+        position: relative;
+        top: 1px;
+      }
+
+
+      &Margin {
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        border: none;
+        outline: none;
+        background: map-get(variables.$colors, "blackColor");
+        color: map-get(variables.$colors, "whiteColor");
+        transition: 0.3s all;
+    
+        &:hover {
+          background: darken(map-get(variables.$colors, "whiteColor"), 65);
+          cursor: pointer;
+        }
+    
+        &:active {
+          position: relative;
+          top: 1px;
+        }
+      }
+    }
+
+    &Light {
+      padding: 1rem 2rem;
+      border: none;
+      outline: none;
+      background: map-get(variables.$colors, "whiteColor");
+      color: map-get(variables.$colors, "blackColor");
+      transition: 0.3s all;
+      border: 0.1rem solid map-get(variables.$colors, "blackColor");
+  
+      &:hover {
+        background: darken(map-get(variables.$colors, "whiteColor"), 10);
+        cursor: pointer;
+      }
+  
+      &:active {
+        position: relative;
+        top: 1px;
+      }
+    }
+  }
+}

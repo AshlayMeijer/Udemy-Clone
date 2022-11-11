@@ -1,0 +1,8 @@
+@use "./abstracts/base";
+@use "./abstracts/reset";
+
+@use "./components/header";
+@use "./components/article";
+@use "./components/footer";
+
+@use "./abstracts/mediaquerries";

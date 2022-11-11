@@ -1,0 +1,84 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.footer {
+    width: 100%;
+    height: auto;
+    padding-bottom: 5rem;
+    background: lighten(map-get(variables.$colors, "blackColor"), 10);
+
+    &__topRow {
+        @include mixins.flexCenter;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__wrapper {
+        @include mixins.flexCenter;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 5rem;
+        width: 50%;
+        gap: 10rem;
+        align-items: flex-start
+    }
+
+    &__collum {
+        @include mixins.flexCenter;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: map-get(variables.$colors, "whiteColor");
+        font-size: 75%;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__langButton {
+        padding-right: 5rem;
+    }
+
+    &__button {
+        padding: 1rem 2rem;
+        border: none;
+        outline: none;
+        background: lighten(map-get(variables.$colors, "blackColor"), 10);
+        color: map-get(variables.$colors, "whiteColor");
+        border: 0.1rem solid map-get(variables.$colors, "whiteColor");
+        transition: 0.3s all;
+        font-size: 100%;
+    
+        &:hover {
+          background: darken(map-get(variables.$colors, "whiteColor"), 70);
+          cursor: pointer;
+        }
+
+        &:active {
+            position: relative;
+            top: 1px;
+        }
+    }
+
+    &__bottomRow {
+        @include mixins.flexCenter;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;    
+        padding-right: 5rem;
+    }
+
+    &__copyright {
+        color: map-get(variables.$colors, "whiteColor");
+    }
+
+    &__udemyLogo {
+        height: 3rem;
+        width: 17.5rem;
+    }
+
+}

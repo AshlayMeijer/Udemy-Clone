@@ -1,0 +1,790 @@
+body {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  color: #000;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  font-weight: lighter;
+  height: 10rem;
+  margin-top: 0;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.6);
+}
+.header__logo {
+  height: 4rem;
+  width: 10rem;
+}
+.header__logo:hover {
+  cursor: pointer;
+}
+.header__search {
+  background: #fafafa;
+  width: 60rem;
+  height: 6rem;
+  padding: 1rem;
+  color: #000;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  border: 0.1rem solid #000;
+  border-radius: 3rem;
+}
+.header__searchInput {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 3rem;
+  background: #fafafa;
+  font-size: 100%;
+}
+.header__catSubTitle, .header__busSubTitle, .header__teachSubTitle {
+  font-weight: lighter;
+  font-size: 90%;
+  transition: 0.3s all;
+}
+.header__catSubTitle:hover, .header__busSubTitle:hover, .header__teachSubTitle:hover {
+  cursor: pointer;
+  color: #6f6f6f;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  gap: 2rem;
+}
+.header__storeCart {
+  width: 100%;
+  height: 100%;
+}
+.header__storeCart:hover {
+  cursor: pointer;
+  color: #6f6f6f;
+}
+.header__loginButton {
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  background: #eee;
+  color: #000;
+  transition: 0.3s all;
+  border: 0.1rem solid #000;
+}
+.header__loginButton:hover {
+  background: #d5d5d5;
+  cursor: pointer;
+}
+.header__loginButton:active {
+  position: relative;
+  top: 1px;
+}
+.header__signupButton {
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  background: #000;
+  color: #eee;
+  transition: 0.3s all;
+}
+.header__signupButton:hover {
+  background: #484848;
+  cursor: pointer;
+}
+.header__signupButton:active {
+  position: relative;
+  top: 1px;
+}
+.header__langButton {
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  background: #eee;
+  border: 0.1rem solid black;
+}
+.header__langButton:hover {
+  background: #d5d5d5;
+  cursor: pointer;
+}
+
+.main__article__savings {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  margin-top: 1rem;
+  height: 40rem;
+}
+.main__article__img {
+  background-image: url("http://127.0.0.1:5500/04%20Archief/01%20Foto's/foto__index__one.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+.main__article__imgTekstWrapper {
+  background: #fff;
+  width: 45rem;
+  height: auto;
+  top: 25%;
+  left: 5%;
+  position: absolute;
+  padding: 1rem;
+  -webkit-box-shadow: 0px 0.5px 10px -3px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 0.5px 10px -3px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0.5px 10px -3px rgba(0, 0, 0, 0.6);
+}
+.main__article__tekst {
+  font-size: 150%;
+  letter-spacing: 0.1rem;
+  line-height: 4rem;
+}
+.main__article__paragraph {
+  line-height: 3rem;
+  font-weight: lighter;
+}
+
+.main__articleCursus {
+  width: 100%;
+  height: auto;
+  padding: 5rem;
+}
+.main__articleCursus__title {
+  font-size: 200%;
+}
+.main__articleCursus__subTitle {
+  letter-spacing: 0.5px;
+}
+.main__articleCursus__linkList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.main__articleCursus__listItem__link {
+  color: #6f6f6f;
+  text-decoration: none;
+  transition: 0.3s all;
+}
+.main__articleCursus__listItem__link:hover {
+  color: #000;
+}
+.main__articleCursus__listItem__link.active {
+  color: #000;
+}
+.main__articleCursus__cursusWrapper {
+  padding: 3rem;
+  border: 0.5px solid #000;
+}
+.main__articleCursus__cursusTitle {
+  font-size: 125%;
+}
+.main__articleCursus__cursusParagraph {
+  max-width: 90ch;
+  font-size: 85%;
+  letter-spacing: 0.5px;
+}
+.main__articleCursus__cursusButton {
+  margin: 1.5rem;
+  padding: 1rem 1.5rem;
+  border: none;
+  outline: none;
+  border: 0.1rem solid #000;
+  background: #fff;
+  transition: 0.3s all;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.main__articleCursus__cursusButton:hover {
+  cursor: pointer;
+  background: #f2f2f2;
+}
+.main__articleCursus__cursusButton:active {
+  background: #d9d9d9;
+}
+.main__articleCursus__cursusList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  padding: 3rem;
+}
+.main__articleCursus__cursusList__title {
+  width: 30ch;
+  letter-spacing: 0.5px;
+  font-weight: lighter;
+}
+.main__articleCursus__cursusList__authorParagraph {
+  font-size: 70%;
+  font-weight: lighter;
+  color: #2f2f2f;
+}
+.main__articleCursus__cursusList__item {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.main__articleCursus__cursusList__imgWrapper {
+  height: 20rem;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main__articleCursus__cursusList__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.3s all;
+}
+.main__articleCursus__cursusList__img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.main__articleCursus__cursusList__starsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 75%;
+  gap: 0.5rem;
+}
+.main__articleCursus__cursusList__stars {
+  color: rgb(200, 168, 0);
+}
+.main__articleCursus__cursusList__starCount {
+  color: rgb(200, 168, 0);
+}
+.main__articleCursus__cursusList__reviewCount {
+  color: #555555;
+  font-size: 75%;
+}
+.main__articleCursus__cursusList__priceWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: 80%;
+}
+.main__articleCursus__cursusList__priceNow {
+  font-weight: bold;
+}
+.main__articleCursus__cursusList__priceBefore {
+  text-decoration: line-through;
+  color: #555555;
+  font-size: 80%;
+}
+
+.main__articleStudent {
+  width: 100%;
+  height: auto;
+}
+.main__articleStudent__title {
+  font-size: 150%;
+  padding: 3rem;
+  padding-left: 7.5rem;
+}
+.main__articleStudent__cursusList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  padding: 3rem;
+}
+.main__articleStudent__cursusList__title {
+  width: 30ch;
+  letter-spacing: 0.5px;
+  font-weight: lighter;
+}
+.main__articleStudent__cursusList__authorParagraph {
+  font-size: 70%;
+  font-weight: lighter;
+  color: #2f2f2f;
+}
+.main__articleStudent__cursusList__item {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.main__articleStudent__cursusList__imgWrapper {
+  height: 20rem;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main__articleStudent__cursusList__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.3s all;
+}
+.main__articleStudent__cursusList__img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.main__articleStudent__cursusList__starsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 75%;
+  gap: 0.5rem;
+}
+.main__articleStudent__cursusList__stars {
+  color: rgb(200, 168, 0);
+}
+.main__articleStudent__cursusList__starCount {
+  color: rgb(200, 168, 0);
+}
+.main__articleStudent__cursusList__reviewCount {
+  color: #555555;
+  font-size: 75%;
+}
+.main__articleStudent__cursusList__priceWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: 80%;
+}
+.main__articleStudent__cursusList__priceNow {
+  font-weight: bold;
+}
+.main__articleStudent__cursusList__priceBefore {
+  text-decoration: line-through;
+  color: #555555;
+  font-size: 80%;
+}
+
+.main__articleCategories__title {
+  font-size: 150%;
+  padding: 3rem;
+  padding-left: 7.5rem;
+}
+.main__articleCategories__cardWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.main__articleCategories__card {
+  height: 35rem;
+  width: 35rem;
+  padding: 5rem;
+}
+.main__articleCategories__cardImgWrapper {
+  height: 25rem;
+  width: 25rem;
+  padding: 2rem;
+}
+.main__articleCategories__cardImg {
+  height: 100%;
+  width: 100%;
+  transition: 0.3s all;
+}
+.main__articleCategories__cardImg:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.main__articleTopics {
+  width: 100%;
+  height: 60rem;
+  background: #eee;
+}
+.main__articleTopics__title {
+  font-size: 150%;
+  padding: 3rem;
+  padding: 7.5rem;
+}
+.main__articleTopics__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  gap: 5rem;
+  text-align: center;
+}
+.main__articleTopics__topicsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  gap: 5rem;
+}
+.main__articleTopics__rowTopics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 5rem;
+}
+.main__articleTopics__rowTopics__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 100%;
+  gap: 4rem;
+}
+.main__articleTopics__buttonWrapper {
+  padding: 7.5rem;
+}
+.main__articleTopics__button {
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  background: #eee;
+  color: #000;
+  transition: 0.3s all;
+  border: 0.1rem solid #000;
+}
+.main__articleTopics__button:hover {
+  background: #bbbbbb;
+  cursor: pointer;
+}
+.main__articleTopics__button:active {
+  position: relative;
+  top: 1px;
+}
+
+.main__articleCompany {
+  height: 30rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.main__articleCompany__title {
+  font-size: 150%;
+  padding: 3rem;
+}
+.main__articleCompany__paragraph {
+  font-size: 100%;
+  max-width: 75%;
+}
+.main__articleCompany__imgList {
+  width: 75%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.main__articleCompany__imgWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 46rem;
+}
+
+.main__articleUdemy {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+.main__articleUdemy__imgRight, .main__articleUdemy__imgLeft {
+  height: 40rem;
+  width: 40rem;
+}
+.main__articleUdemy__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  gap: 10rem;
+}
+.main__articleUdemy__wrapperItemLeft {
+  width: 30ch;
+  height: auto;
+}
+.main__articleUdemy__itemTitle {
+  font-size: 150%;
+  padding-bottom: 2rem;
+}
+.main__articleUdemy__logoBus {
+  height: 5rem;
+  width: 20rem;
+}
+.main__articleUdemy__buttonWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 2rem;
+}
+.main__articleUdemy__buttonDark {
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  background: #000;
+  color: #eee;
+  transition: 0.3s all;
+}
+.main__articleUdemy__buttonDark:hover {
+  background: #484848;
+  cursor: pointer;
+}
+.main__articleUdemy__buttonDark:active {
+  position: relative;
+  top: 1px;
+}
+.main__articleUdemy__buttonDarkMargin {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  background: #000;
+  color: #eee;
+  transition: 0.3s all;
+}
+.main__articleUdemy__buttonDarkMargin:hover {
+  background: #484848;
+  cursor: pointer;
+}
+.main__articleUdemy__buttonDarkMargin:active {
+  position: relative;
+  top: 1px;
+}
+.main__articleUdemy__buttonLight {
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  background: #eee;
+  color: #000;
+  transition: 0.3s all;
+  border: 0.1rem solid #000;
+}
+.main__articleUdemy__buttonLight:hover {
+  background: #d5d5d5;
+  cursor: pointer;
+}
+.main__articleUdemy__buttonLight:active {
+  position: relative;
+  top: 1px;
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  padding-bottom: 5rem;
+  background: #1a1a1a;
+}
+.footer__topRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 5rem;
+  width: 50%;
+  gap: 10rem;
+  align-items: flex-start;
+}
+.footer__collum {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.footer__link {
+  text-decoration: none;
+  color: #eee;
+  font-size: 75%;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__langButton {
+  padding-right: 5rem;
+}
+.footer__button {
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  background: #1a1a1a;
+  color: #eee;
+  border: 0.1rem solid #eee;
+  transition: 0.3s all;
+  font-size: 100%;
+}
+.footer__button:hover {
+  background: #3c3c3c;
+  cursor: pointer;
+}
+.footer__button:active {
+  position: relative;
+  top: 1px;
+}
+.footer__bottomRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  padding-right: 5rem;
+}
+.footer__copyright {
+  color: #eee;
+}
+.footer__udemyLogo {
+  height: 3rem;
+  width: 17.5rem;
+}
+
+@media screen and (max-width: 1400px), screen and (max-device-width: 1400px) {
+  .header__search {
+    width: 35%;
+  }
+  .main__articleCursus__cursusList,
+.main__articleStudent__cursusList {
+    flex-wrap: wrap;
+  }
+  .main__articleCursus__cursusList__item,
+.main__articleStudent__cursusList__item {
+    padding-top: 3rem;
+  }
+  .main__articleTopics {
+    height: auto;
+  }
+  .main__articleTopics__wrapper {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1100px), screen and (max-device-width: 1100px) {
+  .header__logo {
+    height: 3rem;
+    width: 7.5rem;
+  }
+  .header__teachSubTitle {
+    font-size: 75%;
+  }
+  .header__busSubTitle, .header__catSubTitle {
+    display: none;
+  }
+  .main__articleUdemy__wrapper {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+  .wrapper__reverse {
+    flex-direction: column;
+  }
+  .footer__wrapper {
+    flex-direction: column;
+    gap: 0;
+  }
+  .footer__link {
+    font-size: 75%;
+  }
+}
+@media screen and (max-width: 800px), screen and (max-device-width: 800px) {
+  .header__search {
+    width: 40%;
+  }
+  .header__teachSubTitle {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px), screen and (max-device-width: 700px) {
+  .header__search {
+    width: 50%;
+  }
+  .header__storeCart, .header__loginButton, .header__signupButton {
+    display: none;
+  }
+  .main__articleCompany__paragraph {
+    width: 50ch;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
