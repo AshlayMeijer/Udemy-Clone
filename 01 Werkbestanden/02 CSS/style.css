@@ -149,7 +149,7 @@ body {
   height: 40rem;
 }
 .main__article__img {
-  background-image: url("http://127.0.0.1:5500/04%20Archief/01%20Foto's/foto__index__one.webp");
+  background-image: url("/Udemy-Clone/04 Archief/01 Foto's/foto__index__one.webp");
   background-repeat: no-repeat;
   background-position: center;
   height: 100%;
